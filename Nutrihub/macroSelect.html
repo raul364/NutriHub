@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Nutri Hub</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Lato:400,300,700,900" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Amoeba - v2.2.0
+  * Template URL: https://bootstrapmade.com/free-one-page-bootstrap-template-amoeba/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container">
+
+      <div class="logo float-left">
+        <h1 class="text-light"><a href="D:/xampp/htdocs/Nutrihub/index.html"><span>Nutri Hub</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+  <!--==== NAVIGATION====-->
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="#Mplans">Meal Plans</a></li>
+          <li><a href="#ourMenu">Our Menu</a></li>
+          <li><a href="#forum"> Become a chef </a></li>
+          <li><a href="https://tdeecalculator.net/">Calorie Calculator</a></li>  <!--temprary-->
+          <li><a href="https://www.eatthismuch.com/"> Eat This Much </a></li>
+          <li class="menu-has-children"><a href="">workout plans</a>
+            <ul>
+              <li><a href="#">weight loss</a></li>
+              <li><a href="#">Clean bulk</a></li>
+              <li><a href="#">Build muscle</a></li>
+              <li><a href="#">Shred</a></li>
+            </ul>
+          <li><a href="#contact">Contact Us</a></li>
+          <!--====Make it so when you are not logged in, and you click the logo you go straight to login/sign up page and when you are logged in, show the below-->
+          <li class="menu-has-children"><a href=""><i class='fas fa-user' style='font-size:26px; float: right; color:white'></i></a>
+            <ul>
+              <li><a href="#">Account</a></li>
+              <li><a href="#">Fave</a></li>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="D:/xampp/htdocs/Nutrihub/logout.php">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End #header -->
+  
+  <?php
+
+  require(__DIR__ . '/../vendor/autoload.php');
+
+  // Calculations based on weight, height and age
+  use isfonzar\TDEECalculator\TDEECalculator;
+  $tdeeCalculator = new TDEECalculator();
+
+    echo $tdeeCalculator->calculate('male', 176, 6, 24, 'very_active');
+    echo "\n";
+    ?>
+
+  </body>
+
+  </html>
